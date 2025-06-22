@@ -12,8 +12,9 @@ import { hp, wp } from "@/utils/layoutUtils";
 import { SafeScreen } from "@/components/template";
 import useLoginController from "./LoginController";
 import { staticFontStyles } from "@/theme/fonts";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import EmailPasswordInputContainer from "./components/Email";
+import { TabSwitchControl as LoginTabSwitcherMolecule } from "@/components/molecules";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const LoginScreen = () => {
   const {
@@ -59,10 +60,10 @@ const LoginScreen = () => {
             </BaseView>
             {/*  */}
             <BaseView style={{ marginTop: hp(35) }}>
-              {/* <LoginTabSwitcherMolecule
-                isEmailTab={isEmailTab}
-                onSwitchTab={switchTab}
-              /> */}
+              <LoginTabSwitcherMolecule
+                isEmailTab={true}
+                onSwitchTab={() => {}}
+              />
             </BaseView>
 
             <EmailPasswordInputContainer
