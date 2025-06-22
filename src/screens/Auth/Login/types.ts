@@ -1,0 +1,4 @@
+export type EmailFields = {
+  username: string;
+  password: string;
+};
